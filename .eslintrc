@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "plugins": [
+    "import",
+    "react",
+    "react-hooks"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.js?(x)"],
+      "rules": {
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "no-unused-vars": ["error", {
+          "vars": "all",
+          "args": "all",
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^_",
+          "argsIgnorePattern": "^_"
+        }],
+        "no-console": [2, { "allow": [ "warn", "error" ] } ],
+        "quotes": [ "error", "single" ],
+        "jsx-quotes": [ "error", "prefer-double" ],
+        "react-hooks/exhaustive-deps": "error",
+        "react-hooks/rules-of-hooks": "error",
+        "semi": [ "error", "never" ],
+        "import/first": "error"
+      }
+    }
+  ]
+}
