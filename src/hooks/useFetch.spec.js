@@ -25,7 +25,7 @@ test('should load data properly', async () => {
   await waitForNextUpdate()
 
   expect(processResponse.mock.calls.length).toBe(1)
-  expect(processResponse.mock.calls[0][0]).toBe({ id: 'test'  })
+  expect(processResponse.mock.calls[0][0]).toEqual({ id: 'test'  })
   expect(result.current).toEqual({ loading: false, data: 'test', error: false, loaded: true })
 })
 
